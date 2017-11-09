@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device - width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia game</title>
     <!-- Latest compiled and minified CSS -->
@@ -27,11 +27,13 @@
                 <div class="mainArea text-center">
                     <button class="btn btn-primary">Start</button>
                     <h3 id="time">The remaining time: 20 sec.</h3>
-                    <h2 id "question">The question!</h2>
+                    <h2 id="question">The question!</h2>
+
                     <div class="btn-group-vertical" role="group" aria-label="...">
-                        <button type="button" class="btn btn-primary selectors" data-correct: "1">Left</button>
-                        <button type="button" class="btn btn-primary selectors" data-correct: "0">Middle</button>
-                        <button type="button" class="btn btn-primary selectors" data-correct: "0">Right</button>
+                        <button type="button" class="btn btn-primary selectors" id="0">Left</button>
+                        <button type="button" class="btn btn-primary selectors" id="1">Middle</button>
+                        <button type="button" class="btn btn-primary selectors" id="2">Right</button>
+                        <button type="button" class="btn btn-primary selectors" id="3">Right</button>
                     </div>
                 </div>
 
