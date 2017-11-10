@@ -73,8 +73,14 @@ function finalChecker() {
 
 $(document).ready(function() {
     addQuestionToArray("Who is The One in The Matrix movie?", "Neo", "Morpeus", "Mr.Smith", "Trinity");
-    addQuestionToArray("What is a pugilist?", "A boxer", "A stamp collector", "A writer", "The cake is lie");
+    addQuestionToArray("What is a pugilist?", "A boxer", "A stamp collector", "A writer", "A car");
     addQuestionToArray("How many faces does a cube have?", "Six", "Four", "Ten", "Depends on the size of the cube");
+    addQuestionToArray("What can you never eat for breakfast?", "Dinner", "Something sugary", "Lunch", "Supper");
+
+    addQuestionToArray("Spell ''Silk'' out loud, 3 times in a row. What do cows drink?", "Water", "Milk", "Cows can't drink", "Juice");
+    addQuestionToArray("What meme was created by the Portal fandom?", "The cake is a lie", "Why U no", "CAKE", "Other");
+
+
 
     $(".selectors").on("click", function(event) {
         $(".btn-group-vertical").hide();
@@ -101,6 +107,8 @@ $(document).ready(function() {
         mainFunc();
         $(".startButton").hide();
     }
+
     $(".btn-group-vertical").hide();
+
     $(".startButton").click(start);
 });

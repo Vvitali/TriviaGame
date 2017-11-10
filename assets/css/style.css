@@ -18,3 +18,9 @@ body {
 .buttonsGroup {
     opacity: 0;
 }
+
+.btn-floating {
+    position: absolute;
+    left: 49%;
+    bottom: 20px;
+}
