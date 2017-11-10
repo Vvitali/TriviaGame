@@ -8,6 +8,7 @@ var indexOfQuestion = 0;
 var score = [0, 0, 0];
 
 function displayQuestion() {
+    $("#timeBar").css("width", "100%");
     $("#question").text(arrayOfQuestions[indexOfQuestion].question);
     var position = getRandomPositions();
     correctAnswerPosition = position[0];
@@ -37,9 +38,10 @@ function getRandomPositions() {
 
 function mainFunc() {
     $(".btn-group-vertical").show();
-    var counter = 30;
+    var counter = 25;
     timeHolderSecondary = setInterval(function() {
-        $("#time").text(--counter);
+        --counter
+        $("#timeBar").css("width", (counter * 4) + "%");
     }, 1000);
     timeHolderMain = setInterval(function() {
         $(".btn-group-vertical").hide();
@@ -49,13 +51,14 @@ function mainFunc() {
         clearTimeout(timeHolderMain);
         score[2]++;
         finalChecker()
-    }, 30 * 1000);
+    }, 25 * 1000);
 }
 
 function finalChecker() {
     if (indexOfQuestion === arrayOfQuestions.length - 1) {
-        $("#question").html("Your score:" + "<p>Correct answers:" + score[0] + "</p><br><p>Incorrect answers: " + score[1] + "</p><br><p>Not answered: " + score[2]);
+        $("#question").html("Your score:" + "<p><i class='middle material-icons'>check_circle</i> Correct answers:" + score[0] + "</p><br><p><i class='middle material-icons'>cancel</i> Incorrect answers: " + score[1] + "</p><br><p><i class='middle material-icons'>add_alarm</i> Not answered: " + score[2]);
         $(".btn-group-vertical").hide();
+        $(".startButton").prepend("<i class='material-icons'>autorenew</i>")
         $(".startButton").show()
     }
     else {

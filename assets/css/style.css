@@ -1,6 +1,5 @@
 body {
-    background-color: grey;
-    color: white;
+    color: Black;
 }
 
 .mainArea {
@@ -14,4 +13,8 @@ body {
 .selectors {
     min-width: 140px;
 
+}
+
+.buttonsGroup {
+    opacity: 0;
 }
